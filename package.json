@@ -35,25 +35,25 @@
       "post-commit": "npm run success-message",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
      }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,html}": [
+      "npm run lint"
+      ]
     },
-   "lint-staged": {
-     "*.{js,jsx,ts,tsx,html}": [
-       "npm run lint"
-       ]
-     },
-   "commitlint": {
-     "rules": {
-       "references-empty": [
-         2,
-         "always"
-       ]
-   },
-     "parserPreset": {
-       "parserOpts": {
-         "issuePrefixes": [
-           "ISSUE-"
-         ]
-       }
-     }
-   }
+  "commitlint": {
+    "rules": {
+      "references-empty": [
+        2,
+        "always"
+      ]
+    },
+    "parserPreset": {
+      "parserOpts": {
+        "issuePrefixes": [
+          "ISSUE-"
+        ]
+      }
+    }
+  }
 }
