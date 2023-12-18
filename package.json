@@ -11,10 +11,12 @@
     "setup": "npm i && npx husky install"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.0.1",
     "next": "14.0.3",
     "prop-types": "^15.8.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-redux": "^9.0.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
@@ -22,7 +24,7 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "14.0.3",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
@@ -35,13 +37,13 @@
       "pre-commit": "lint-staged",
       "post-commit": "npm run success-message",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-     }
+    }
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,html}": [
       "npm run lint"
-      ]
-    },
+    ]
+  },
   "commitlint": {
     "rules": {
       "references-empty": [
